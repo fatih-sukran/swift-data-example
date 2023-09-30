@@ -9,18 +9,26 @@
 /* Begin PBXBuildFile section */
 		89E5B2D22AC4C0F4007C1C72 /* Shoppier_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2D12AC4C0F4007C1C72 /* Shoppier_CloneApp.swift */; };
 		89E5B2D42AC4C0F4007C1C72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2D32AC4C0F4007C1C72 /* ContentView.swift */; };
-		89E5B2D62AC4C0F4007C1C72 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2D52AC4C0F4007C1C72 /* Item.swift */; };
 		89E5B2D82AC4C0F6007C1C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E5B2D72AC4C0F6007C1C72 /* Assets.xcassets */; };
 		89E5B2DB2AC4C0F6007C1C72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E5B2DA2AC4C0F6007C1C72 /* Preview Assets.xcassets */; };
+		89E5B2E32AC5D3EB007C1C72 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2E22AC5D3EB007C1C72 /* File.swift */; };
+		89E5B2E52AC5DAF6007C1C72 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2E42AC5DAF6007C1C72 /* Date+Extension.swift */; };
+		89E5B2E72AC5FAE8007C1C72 /* AddOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2E62AC5FAE8007C1C72 /* AddOrder.swift */; };
+		89E5B2EC2AC600A5007C1C72 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2EB2AC600A5007C1C72 /* CoreDataHelper.swift */; };
+		89E5B2EF2AC730F4007C1C72 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E5B2EE2AC730F4007C1C72 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		89E5B2CE2AC4C0F4007C1C72 /* Shoppier Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoppier Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E5B2D12AC4C0F4007C1C72 /* Shoppier_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoppier_CloneApp.swift; sourceTree = "<group>"; };
 		89E5B2D32AC4C0F4007C1C72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		89E5B2D52AC4C0F4007C1C72 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		89E5B2D72AC4C0F6007C1C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89E5B2DA2AC4C0F6007C1C72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89E5B2E22AC5D3EB007C1C72 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		89E5B2E42AC5DAF6007C1C72 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		89E5B2E62AC5FAE8007C1C72 /* AddOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrder.swift; sourceTree = "<group>"; };
+		89E5B2EB2AC600A5007C1C72 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		89E5B2EE2AC730F4007C1C72 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +61,14 @@
 		89E5B2D02AC4C0F4007C1C72 /* Shoppier Clone */ = {
 			isa = PBXGroup;
 			children = (
+				89E5B2ED2AC600AA007C1C72 /* Helper */,
+				89E5B2E12AC5D3DC007C1C72 /* Extensions */,
 				89E5B2D12AC4C0F4007C1C72 /* Shoppier_CloneApp.swift */,
 				89E5B2D32AC4C0F4007C1C72 /* ContentView.swift */,
-				89E5B2D52AC4C0F4007C1C72 /* Item.swift */,
+				89E5B2E62AC5FAE8007C1C72 /* AddOrder.swift */,
 				89E5B2D72AC4C0F6007C1C72 /* Assets.xcassets */,
 				89E5B2D92AC4C0F6007C1C72 /* Preview Content */,
+				89E5B2EE2AC730F4007C1C72 /* Order.swift */,
 			);
 			path = "Shoppier Clone";
 			sourceTree = "<group>";
@@ -68,6 +79,23 @@
 				89E5B2DA2AC4C0F6007C1C72 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89E5B2E12AC5D3DC007C1C72 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89E5B2E22AC5D3EB007C1C72 /* File.swift */,
+				89E5B2E42AC5DAF6007C1C72 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89E5B2ED2AC600AA007C1C72 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				89E5B2EB2AC600A5007C1C72 /* CoreDataHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E5B2E52AC5DAF6007C1C72 /* Date+Extension.swift in Sources */,
 				89E5B2D42AC4C0F4007C1C72 /* ContentView.swift in Sources */,
-				89E5B2D62AC4C0F4007C1C72 /* Item.swift in Sources */,
+				89E5B2EC2AC600A5007C1C72 /* CoreDataHelper.swift in Sources */,
+				89E5B2E32AC5D3EB007C1C72 /* File.swift in Sources */,
+				89E5B2E72AC5FAE8007C1C72 /* AddOrder.swift in Sources */,
 				89E5B2D22AC4C0F4007C1C72 /* Shoppier_CloneApp.swift in Sources */,
+				89E5B2EF2AC730F4007C1C72 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +314,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +344,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
