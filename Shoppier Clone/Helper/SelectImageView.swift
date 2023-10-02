@@ -6,13 +6,37 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct SelectImageView: View {
+    
+    @State private var photoPickerItem: PhotosPickerItem?
+    @Binding var selectedImage: Data?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            PhotosPicker(selection: $photoPickerItem, matching: .images, photoLibrary: .shared()) {
+                Text("Select Image") //, systemImage: "add")
+            }
+            .task(id: photoPickerItem) {
+                selectedImage = try? await photoPickerItem?.loadTransferable(type: Data.self)
+            }
+        }
+    }
+        
+}
+
+fileprivate struct MyView: View {
+    
+    @State var image: Data?
+    
+    var body: some View {
+        SelectImageView(selectedImage: $image)
     }
 }
 
 #Preview {
-    SelectImageView()
+    MyView()
 }
+
