@@ -41,6 +41,33 @@ struct TabItem: View {
     }
 }
 
+struct CardImage: View {
+
+    var body: some View{
+        ZStack(alignment: .topTrailing) {
+            Image(data: order.imageData)!
+                .resizable()
+                .frame(width: 80, height: 80)
+                .cornerRadius(21)
+                .padding(.top, 5)
+                .padding(.trailing, 5)
+            
+            ZStack {
+                Rectangle()
+                    .frame(width: 22, height: 22)
+                    .cornerRadius(15, corner: .bottomLeft)
+                    .cornerRadius(15, corner: .bottomRight)
+                    .cornerRadius(15, corner: .topLeft)
+                    .foregroundStyle(.white)
+                
+                Circle()
+                    .frame(width: 13, height: 13)
+                    .foregroundColor(Color(red: 115 / 255, green: 240 / 255, blue: 200 / 255))
+            }
+        }
+    }
+}
+
 struct Card: View {
     
     @Environment(\.modelContext) var context
@@ -48,27 +75,7 @@ struct Card: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            ZStack(alignment: .topTrailing) {
-                Image(data: order.imageData)!
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(21)
-                    .padding(.top, 5)
-                    .padding(.trailing, 5)
-                
-                ZStack {
-                    Rectangle()
-                        .frame(width: 22, height: 22)
-                        .cornerRadius(15, corner: .bottomLeft)
-                        .cornerRadius(15, corner: .bottomRight)
-                        .cornerRadius(15, corner: .topLeft)
-                        .foregroundStyle(.white)
-                    
-                    Circle()
-                        .frame(width: 13, height: 13)
-                        .foregroundColor(Color(red: 115 / 255, green: 240 / 255, blue: 200 / 255))
-                }
-            }
+            CardImage()
             VStack(alignment: .leading) {
                 HStack {
                     VStack(alignment: .leading) {
