@@ -135,19 +135,6 @@ struct ContentView: View {
                 ForEach(orders, id: \.self) { order in
                     Card(order: order)
                 }
-//                .swipeActions {
-//                    Button(role: .destructive) {
-//                                                    print("Deleting conversation")
-//                    } label: {
-//                        Label("Delete", systemImage: "trash.fill")
-//                    }
-//                }
-//                .onDelete(perform: { indexSet in
-//                    indexSet.forEach { index in
-//                        context.delete(orders[index])
-//                    }
-//                })
-//                Spacer()
             }
             .padding(21)
             .navigationTitle("Siparişler")
